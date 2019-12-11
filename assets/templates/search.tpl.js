@@ -3,7 +3,7 @@
 templates['search'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=container.escapeExpression;
 
-  return "<div class=\"col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2 p-md-3\">\n  <span class=\""
+  return "<div class=\"col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2 p-md-3\">\n  <span class=\""
     + alias3(((helper = (helper = helpers.categoryClass || (depth0 != null ? depth0.categoryClass : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"categoryClass","hash":{},"data":data}) : helper)))
     + "\">"
     + alias3(((helper = (helper = helpers.category || (depth0 != null ? depth0.category : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"category","hash":{},"data":data}) : helper)))
@@ -17,7 +17,9 @@ templates['search'] = template({"compiler":[7,">= 4.0.0"],"main":function(contai
     + alias3(((helper = (helper = helpers.localisedName || (depth0 != null ? depth0.localisedName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"localisedName","hash":{},"data":data}) : helper)))
     + "\">\n      </figure>\n      \n      <h1 class=\"projectslist__listing__title\">"
     + alias3(((helper = (helper = helpers.localisedName || (depth0 != null ? depth0.localisedName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"localisedName","hash":{},"data":data}) : helper)))
-    + "</h1>\n      <span class=\"projectslist__listing__url\">"
+    + "</h1>\n      <h3 class=\"projectslist__listing\">"
+    + alias3(((helper = (helper = helpers.shortDescription || (depth0 != null ? depth0.shortDescription : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"shortDescription","hash":{},"data":data}) : helper)))
+    + "</h3>\n      <span class=\"projectslist__listing__url\">"
     + alias3(((helper = (helper = helpers.readMore || (depth0 != null ? depth0.readMore : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"readMore","hash":{},"data":data}) : helper)))
     + " →</span>\n    </a>\n  </article>\n</div>";
 },"useData":true});

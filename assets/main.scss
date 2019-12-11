@@ -1415,6 +1415,7 @@ body {
         }
         .main-image {
             position: relative;
+            margin-top: 5px;
             overflow: hidden;
             width: 100%;;
             @include media-breakpoint-up(md) {    
@@ -1430,6 +1431,13 @@ body {
         h1 {
             color: #333333;
             font-size: 1.2rem;
+            margin-top: 1rem;
+            letter-spacing: 0;
+        }
+        h3 {
+            color: #00264D;
+            font-size: 0.9rem;
+            font-weight: 300;
             margin-top: 1rem;
             letter-spacing: 0;
         }
