@@ -19,15 +19,8 @@
         {% endif %}
         {% endif %}
 
-        <!-- Workaround for correctly resolving SVG images served by GitHub -->
-        {% if software.publiccode.logo contains 'github' and software.publiccode.logo contains '.svg' %}
-        {% assign logo = software.publiccode.logo | append: '?sanitize=true' %}
-        {% else %}
-        {% assign logo = item.publiccode.logo %}
-        {% endif %}
-        <div class="main-image"
-            style=" background: url({{ description.screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}) no-repeat top center;">
-        </div>
+        {% include display-logo.html logo=item.publiccode.logo screenshots=description.screenshots %}
+        
         <p class="name color-inherit">
             {{ sw_name }}
         </p>

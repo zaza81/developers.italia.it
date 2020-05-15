@@ -646,18 +646,11 @@ layout: default
         <div class="col-12 relate">
           {% assign relsw_url = '/' | append: active_lang | append: '/software/' | append: relsw.slug | downcase %}
 
-          <!-- Workaround for correctly resolving SVG images served by GitHub -->
-          {% if relsw.publiccode.logo contains 'github' and relsw.publiccode.logo contains '.svg' %}
-          {% assign logo = relsw.publiccode.logo | append: '?sanitize=true' %}
-          {% else %}
-          {% assign logo = relsw.publiccode.logo %}
-          {% endif %}
+
           <div class="img-container">
             <a href="{{ relsw_url }}">
-              <img class="img-fluid"
-                src="{{ relsw_description.screenshots | first | default: logo | default: '/assets/images/placeholder-software-riuso.jpg' }}"
-                onerror="this.src='/assets/images/placeholder-software-riuso.jpg'"
-                alt="{{ relsw_name }}"></a>
+              {% include display-logo.html logo = relsw.publiccode.logo screenshots = relsw_description.screenshots %}
+            </a>
           </div>
           <div class="relate-body">
             <p class="relate-title">
