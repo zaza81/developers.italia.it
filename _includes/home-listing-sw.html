@@ -32,6 +32,7 @@
                     class="d-flex flex-column align-items-start h-100 mb-4 mb-sm-0 {% if withimages!=true %}withshadow px-4{%else%}px-3{%endif%} ">
                     {% if withimages == true %}
 
+                    <!-- Workaround for correctly resolving SVG images served by GitHub -->
                     {% if item.publiccode.logo contains 'github' and item.publiccode.logo contains '.svg' %}
                     {% assign logo = item.publiccode.logo | append: '?sanitize=true' %}
                     {% else %}

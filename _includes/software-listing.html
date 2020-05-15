@@ -18,17 +18,16 @@
         <p class="icon-type-generic-sw">SOFTWARE OPEN SOURCE DI TERZE PARTI</p>
         {% endif %}
         {% endif %}
-        
+
+        <!-- Workaround for correctly resolving SVG images served by GitHub -->
         {% if software.publiccode.logo contains 'github' and software.publiccode.logo contains '.svg' %}
         {% assign logo = software.publiccode.logo | append: '?sanitize=true' %}
-        <div class="main-image"
-            style=" background: url({{ logo }}) no-repeat top center;">
-        </div>
         {% else %}
-        <div class="main-image"
-            style=" background: url({{ description.screenshots | first | default: software.publiccode.logo | default:'/assets/images/placeholder-software-riuso.jpg'}}) no-repeat top center;">
-        </div>
+        {% assign logo = item.publiccode.logo %}
         {% endif %}
+        <div class="main-image"
+            style=" background: url({{ description.screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}) no-repeat top center;">
+        </div>
         <p class="name color-inherit">
             {{ sw_name }}
         </p>
