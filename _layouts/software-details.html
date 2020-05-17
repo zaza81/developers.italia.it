@@ -651,12 +651,12 @@ layout: default
           <div class="img-container">
             <a href="{{ relsw_url }}" class="d-inline-block w-100 h-100">
               {% capture swClasses %} w-100 h-100 {% endcapture %}
-              {% include display-logo.html 
-                logo = relsw.publiccode.logo 
-                {% comment %}
+              {% comment %}
                 Find a way to pass something like this:
                 codiceIPA = page.publiccode.it.riuso.codiceIPA
                 {% endcomment %}
+              {% include display-logo.html 
+                logo = relsw.publiccode.logo 
                 screenshots = relsw_description.screenshots
                 classes = swClasses
               %}
