@@ -14,5 +14,8 @@
 4. If everything else fails, defaults to placeholder
  -->
   <div class="{{ classes }}"
-    style="background: url({{ screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}), url('/assets/images/placeholder-software-riuso.jpg') no-repeat top center;">
+    style="background-image: url({{ screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}), url('/assets/images/placeholder-software-riuso.jpg');
+      background-position: top center;
+      background-repeat: no-repeat; "
+  >
   </div>
