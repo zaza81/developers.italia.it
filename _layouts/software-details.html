@@ -648,8 +648,8 @@ layout: default
 
 
           <div class="img-container">
-            <a href="{{ relsw_url }}">
-              {% assign swClasses = "d-inline-block" %}
+            <a href="{{ relsw_url }}" class="d-inline-block w-100 h-100">
+              {% capture swClasses %} w-100 h-100 {% endcapture %}
               {% include display-logo.html 
                 logo = relsw.publiccode.logo 
                 screenshots = relsw_description.screenshots
