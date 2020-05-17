@@ -1,4 +1,7 @@
-<!-- Workaround for correctly resolving SVG images served by GitHub -->
+{% comment %}
+Workaround for correctly resolving SVG images served by GitHub
+{% endcomment %}
+
 {% assign itemLogo = include.itemLogo %}
 {% assign screenshots = include.screenshots %}
 {% assign classes = include.classes %}
@@ -7,12 +10,15 @@
 {% else %}
   {% assign logo=itemLogo %}
 {% endif %}
-<!-- Show images: 
+
+{% comment %}
+Show images: 
 1. Screenshot
 2. Logo
 3. Default logo
 4. If everything else fails, defaults to placeholder
- -->
+{% endcomment %}
+
   <div class="{{ classes }}"
     style="background-image: url({{ screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}), url('/assets/images/placeholder-software-riuso.jpg');
       background-position: top center;
