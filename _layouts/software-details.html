@@ -639,6 +639,7 @@ layout: default
     <div class="row">
       <div class="owl-carousel col-10 offset-1 offset-sm-0 col-sm-12">
         {% for relsw in page.relatedSoftwares %}
+        {{ relsw }}
         {% assign relsw_description = relsw.publiccode.description[active_lang]
         | default: relsw.publiccode.description.en
         | default: relsw.publiccode.description.it %}
@@ -652,6 +653,10 @@ layout: default
               {% capture swClasses %} w-100 h-100 {% endcapture %}
               {% include display-logo.html 
                 logo = relsw.publiccode.logo 
+                {% comment %}
+                Find a way to pass something like this:
+                codiceIPA = page.publiccode.it.riuso.codiceIPA
+                {% endcomment %}
                 screenshots = relsw_description.screenshots
                 classes = swClasses
               %}
