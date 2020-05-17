@@ -1,26 +1,34 @@
 {% comment %}
-Workaround for correctly resolving SVG images served by GitHub
+Logo and screenshots handler.
 {% endcomment %}
 
 {% assign itemLogo = include.itemLogo %}
 {% assign screenshots = include.screenshots %}
 {% assign classes = include.classes %}
+{% assign codiceIPA = include.codiceIPA | default: "false" %}
+
 {% if itemLogo contains 'github' and itemLogo contains '.svg' %}
   {% assign logo=itemLogo | append: '?sanitize=true' %}
 {% else %}
   {% assign logo=itemLogo %}
 {% endif %}
 
+{% if codiceIPA != "false" %}
+{% assign placeholderScreen = "/assets/images/placeholder-software-riuso.jpg" %}
+{% else %}
+{% assign placeholderScreen = "/assets/images/cover_software_opensource.png" %}
+{% endif %}
+
 {% comment %}
 Show images: 
 1. Screenshot
 2. Logo
-3. Default logo
+3. Default placeholder
 4. If everything else fails, defaults to placeholder
 {% endcomment %}
 
   <div class="{{ classes }}"
-    style="background-image: url({{ screenshots | first | default: logo | default:'/assets/images/placeholder-software-riuso.jpg'}}), url('/assets/images/placeholder-software-riuso.jpg');
+    style="background-image: url({{ screenshots | first | default: logo | default: placeholderScreen }}), url('{{ placeholderScreen }}');
       background-position: top center;
       background-repeat: no-repeat; "
   >
