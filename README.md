@@ -1,7 +1,7 @@
 <h1 align="center">Developers Italia</h1>
 
 <div align="center">
-<img src="logo.png" style="width: 200px;">
+<img src="logo.png">
 </div>
 <div align="center">
 We develop public services, together
@@ -56,7 +56,7 @@ We develop public services, together
 # Description (https://developers.italia.it)
 
 <div align="center">
-	<img alt="Developers Italia Homepage" src="screenshot.png" style="width:500" />
+	<img alt="Developers Italia Homepage" src="screenshot.png" />
 </div>
 
 
