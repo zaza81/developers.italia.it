@@ -1,7 +1,7 @@
 <h1 align="center">Developers Italia</h1>
 
 <div align="center">
-<img src="logo.png">
+<img src="logo.png" style="width: 200px;">
 </div>
 <div align="center">
 We develop public services, together
@@ -17,8 +17,7 @@ We develop public services, together
     <img alt="Netlify" src="https://img.shields.io/netlify/92a97b26-4e6c-4408-9270-9603f951eccf">
     </a>
     <a href="https://github.com/italia/developers.italia.it/releases">
-      <img alt="GitHub release (latest SemVer)"
-      src="https://img.shields.io/github/v/release/italia/developers.italia.it">
+      <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/italia/developers.italia.it">
     </a>
 	<a href="LICENSE.md">
       <img alt="GitHub" src="https://img.shields.io/github/license/italia/developers.italia.it">
@@ -37,7 +36,8 @@ We develop public services, together
     <span> | </span> 
     <a href="https://github.com/italia/publiccode.yml">
       publiccode.yml
-    </a>   
+    </a>
+    <span> | </span>  
     <a href="CONTRIBUTING.md">
       Contributing
     </a>
