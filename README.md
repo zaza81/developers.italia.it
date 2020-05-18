@@ -4,7 +4,7 @@
 <img src="logo.png">
 </div>
 <div align="center">
-We develop public services, together
+<i> We develop public services, together </i>
 </div>
 
 <br />
@@ -53,15 +53,16 @@ We develop public services, together
 - [License](#license)
 
 
-# Description (https://developers.italia.it)
+# Description
 
 <div align="center">
 	<img alt="Developers Italia Homepage" src="screenshot.png" />
 </div>
 
 
-The website of the developer community designing and developing public digital services in Italy.
+Developers Italia is the reference point for the community of developers creating the next generation of digital public services in Italy.
 
+This repository contains the sources of the website. 
 The website is developed using [Jekyll](https://jekyllrb.com/) and it's currently served through [GitHub pages](https://pages.github.com/).
 
 A [CircleCI job](.circleci/config.yml) builds the sources and commits the resulting artifacts to GitHub, in the [docs folder](docs). The [same job](.circleci/config.yml) is also triggered every night to get the most updated data feeding the website.
@@ -132,5 +133,7 @@ Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a great collab
 Every contribution is welcome! Before proceeding further please take a look at our [contributing guidelines](CONTRIBUTING.md). 
 
 # License
+
+Copyright (c) 2018-2020 - Presidenza del Consiglio dei Ministri
 
 The source code is released under the BSD license (code SPDX: *BSD-3-Clause*) and it's distributed with this license since May 30th 2018. The previous code has been released under under the MIT license.
