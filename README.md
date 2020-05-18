@@ -1,6 +1,64 @@
-# Developers Italia website (https://developers.italia.it)
+<h1 align="center">Developers Italia</h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/92a97b26-4e6c-4408-9270-9603f951eccf/deploy-status)](https://app.netlify.com/sites/developers-italia/deploys) [![CircleCI](https://circleci.com/gh/italia/developers.italia.it.svg?style=svg)](https://circleci.com/gh/italia/developers.italia.it)
+<div align="center">
+<img src="logo.png">
+</div>
+<div align="center">
+We develop public services, together
+</div>
+
+<br />
+
+ <!-- Badges -->
+<div align="center">
+    <!-- CircleCI-->
+	<a href="https://circleci.com/gh/italia/developers.italia.it"><img src="https://circleci.com/gh/italia/developers.italia.it.svg?style=shield"></a>
+    <a href="https://app.netlify.com/sites/developers-italia/deploys">
+    <img alt="Netlify" src="https://img.shields.io/netlify/92a97b26-4e6c-4408-9270-9603f951eccf">
+    </a>
+    <a href="https://github.com/italia/developers.italia.it/releases">
+      <img alt="GitHub release (latest SemVer)"
+      src="https://img.shields.io/github/v/release/italia/developers.italia.it">
+    </a>
+	<a href="LICENSE.md">
+      <img alt="GitHub" src="https://img.shields.io/github/license/italia/developers.italia.it">
+    </a>
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://developers.italia.it">
+      Website
+    </a>
+    <span> | </span>
+    <a href="https://developers.italia.it/en/software">
+      Reuse Catalog
+    </a>
+    <span> | </span> 
+    <a href="https://github.com/italia/publiccode.yml">
+      publiccode.yml
+    </a>   
+    <a href="CONTRIBUTING.md">
+      Contributing
+    </a>
+  </h3>
+</div>
+
+
+# Index
+
+- [Description](#description)
+- [Documentation](#documentation)
+- [Community](#community)
+- [License](#license)
+
+
+# Description (https://developers.italia.it)
+
+<div align="center">
+	<img alt="Developers Italia Homepage" src="screenshot.png" style="width:500" />
+</div>
+
 
 The website of the developer community designing and developing public digital services in Italy.
 
@@ -8,6 +66,7 @@ The website is developed using [Jekyll](https://jekyllrb.com/) and it's currentl
 
 A [CircleCI job](.circleci/config.yml) builds the sources and commits the resulting artifacts to GitHub, in the [docs folder](docs). The [same job](.circleci/config.yml) is also triggered every night to get the most updated data feeding the website.
 
+# Documentation
 ## Development 
 
 A development environment can be both brought up directly on the developer machine and in form of a Docker container.
@@ -64,7 +123,14 @@ Some environment variables change the behavior of different aspects of your buil
 
 * **NOKOGIRI_USE_SYSTEM_LIBRARIES**: can be either set to *true* or *false*. You usually want to set this to *true* (default). The [Nokogiri documentation](https://nokogiri.org/tutorials/installing_nokogiri.html#install-with-system-libraries) mentions that this allows to use the OS *libxml2* and *libxslt* libraries, instead of using the Nokogiri ones
 
+# Community
 
-## License
+## Code of Conduct
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a great collaboration with the rest of the community. 
+
+## Contributing
+Every contribution is welcome! Before proceeding further please take a look at our [contributing guidelines](CONTRIBUTING.md). 
+
+# License
 
 The source code is released under the BSD license (code SPDX: *BSD-3-Clause*) and it's distributed with this license since May 30th 2018. The previous code has been released under under the MIT license.
